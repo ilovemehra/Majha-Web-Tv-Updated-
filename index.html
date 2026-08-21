@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="pa">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1920,height=1080,initial-scale=1">
+<title>Majha Web TV - OBS Overlay</title>
+<style>
+html,body{margin:0;padding:0;width:1920px;height:1080px;overflow:hidden;background:transparent!important}
+.canvas{position:relative;width:1920px;height:1080px;background:transparent}
+.logo{position:absolute;left:20px;top:15px;width:215px;height:160px;object-fit:contain;z-index:20}
+.bottom{position:absolute;left:0;top:825px;width:1920px;height:255px;object-fit:fill;z-index:1}
+/* Animated LIVE indicator at the left side of the blue ticker */
+.live{position:absolute;left:14px;top:934px;width:120px;height:112px;object-fit:contain;z-index:30}
+.ticker{position:absolute;left:150px;top:934px;width:1755px;height:112px;overflow:hidden;z-index:25;display:flex;align-items:center;white-space:nowrap;pointer-events:none}
+.ticker-track{display:flex;width:max-content;align-items:center;animation:scrollTicker 24s linear infinite;will-change:transform}
+.ticker-text{display:block;color:#fff;font-family:"Noto Sans Gurmukhi","Raavi","Nirmala UI","Arial Unicode MS",Arial,sans-serif;font-size:23px;line-height:40px;font-weight:700;letter-spacing:.2px;padding-right:220px;text-shadow:0 1px 2px rgba(0,0,0,.55)}
+@keyframes scrollTicker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+</style>
+</head>
+<body>
+<div class="canvas">
+<img class="logo" src="assets/logo.png" alt="">
+<img class="bottom" src="assets/bottom.png" alt="">
+<video class="live" src="assets/live.webm" autoplay loop muted playsinline></video>
+<div class="ticker"><div class="ticker-track">
+<div class="ticker-text">ਪਿਂਡ ਬਲੱਗਣ (ਅੰਮ੍ਰਿਤਸਰ) ਮਹਾਨ ਗੁਰਮਤਿ ਸਮਾਗਮ 20 ਅਗਸਤ 2026 | BALAGGAN (AMRITSAR) MAHAN GURMAT SMAGAM 20 AUGUST 2026</div>
+<div class="ticker-text">ਪਿਂਡ ਬਲੱਗਣ (ਅੰਮ੍ਰਿਤਸਰ) ਮਹਾਨ ਗੁਰਮਤਿ ਸਮਾਗਮ 20 ਅਗਸਤ 2026 | BALAGGAN (AMRITSAR) MAHAN GURMAT SMAGAM 20 AUGUST 2026</div>
+</div></div>
+</div>
+</body>
+</html>
